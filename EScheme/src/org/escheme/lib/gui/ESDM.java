@@ -1,6 +1,7 @@
 package org.escheme.lib.gui;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.Insets;
 import java.io.BufferedInputStream;
@@ -878,5 +879,13 @@ public class ESDM {
 	public ArrayList<ESDrawPanel> getDrawPanels(){
 		return drawPanels;
 	}
+
+	/**
+	 * Restituisce il pannello attualmente visibile
+	 * @return ESDrawPanel
+	 */
+//	public ESDrawPanel getFocusedDrawPanel() {
+//		return drawPanels.get(0);
+//	}
 
 }

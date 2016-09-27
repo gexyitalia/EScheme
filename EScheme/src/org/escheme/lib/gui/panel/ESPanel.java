@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
+import javax.swing.border.EmptyBorder;
 
 import org.escheme.Escheme;
 
@@ -64,7 +65,7 @@ public class ESPanel extends ESPanelRaw{
 	 * può essere impostato con setTitle
 	 */
 	public ESPanel(){
-		
+		setBorder(new EmptyBorder(0,0,0,0));
 	}
 	
 	public void addContent(Component _c){

@@ -70,9 +70,18 @@ public class ESMouseTracker {
 	
 	/**
 	 * Restituisce la posizione attuale del mouse follower
-	 * @return
+	 * @return Point
+	 * @deprecated getTrackerPosition()
 	 */
 	public Point getFollowerPosition(){
+		return followerPosition;
+	}
+	
+	/**
+	 * Restituisce la posizione attuale del mouse tracker
+	 * @return Point
+	 */
+	public Point getTrackerPosition(){
 		return followerPosition;
 	}
 	
@@ -92,9 +101,8 @@ public class ESMouseTracker {
 				if(mouseTracking){
 					followerPosition.x=e.getX();
 					followerPosition.y=e.getY();
-					System.out.println(String.valueOf(calcDiagonalSize()));
+//					System.out.println(String.valueOf(calcDiagonalSize()));
 				}
-//				
 			}
 
 		});

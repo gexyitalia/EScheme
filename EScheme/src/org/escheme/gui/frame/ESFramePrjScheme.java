@@ -11,6 +11,8 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
@@ -50,6 +52,7 @@ public class ESFramePrjScheme extends ESFrame{
 	public static ESPanelContainer panelContainerBottom; //cotenutore dei pannelli bottom
 	public static ESPanelContainer panelContainerTop; //cotenutore dei pannelli top
 
+	public static ESPanelWorkspaceInfo panelWorkspaceInfo;//pannelo workspace info
 
 	//costruttore
 	public ESFramePrjScheme(){
@@ -80,7 +83,6 @@ public class ESFramePrjScheme extends ESFrame{
 		pack();
 		setVisible(true);
 		
-		Test tt = new Test();
 	} 
 
 	/**
@@ -490,8 +492,8 @@ public class ESFramePrjScheme extends ESFrame{
 		}else{
 			Escheme.esdm.getDrawPanels().get(0).mouseTracker.stop();
 		}
-			
 	}
+			
 	
 	/**
 	 * Aggiunge un file al desk
@@ -558,7 +560,7 @@ public class ESFramePrjScheme extends ESFrame{
 		panelContainerTop.add(panelToolbar);
 		//		panelContainerTop.setBackground(Color.blue);
 		
-		ESPanelWorkspaceInfo panelWorkspaceInfo = new ESPanelWorkspaceInfo();
+		panelWorkspaceInfo = new ESPanelWorkspaceInfo();
 		panelWorkspaceInfo.setSize(panelContainerTop.getPreferredSize());
 		panelContainerBottom.add(panelWorkspaceInfo);
 
